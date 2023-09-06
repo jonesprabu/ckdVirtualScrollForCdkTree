@@ -10,61 +10,284 @@ import { MatIconModule } from '@angular/material/icon';
 import { combineLatest, map, Observable, of, startWith } from 'rxjs';
 import { TreeVsStratergyService } from '../tree-vs-stratergy.service';
 
+// const TREE_DATA: ExampleFlatNode[] = [
+//   {
+//     name: 'Fruit',
+//     expandable: true,
+//     level: 0,
+//   },
+//   {
+//     name: 'Apple',
+//     expandable: false,
+//     level: 1,
+//   },
+//   {
+//     name: 'Banana',
+//     expandable: false,
+//     level: 1,
+//   },
+//   {
+//     name: 'Fruit loops',
+//     expandable: false,
+//     level: 1,
+//   },
+//   {
+//     name: 'Vegetables',
+//     expandable: true,
+//     level: 0,
+//   },
+//   {
+//     name: 'Green',
+//     expandable: true,
+//     level: 1,
+//   },
+//   {
+//     name: 'Broccoli',
+//     expandable: false,
+//     level: 2,
+//   },
+//   {
+//     name: 'Brussels sprouts',
+//     expandable: false,
+//     level: 2,
+//   },
+//   {
+//     name: 'Orange',
+//     expandable: true,
+//     level: 1,
+//   },
+//   {
+//     name: 'Pumpkins',
+//     expandable: false,
+//     level: 2,
+//   },
+//   {
+//     name: 'Carrots',
+//     expandable: false,
+//     level: 2,
+//   },
+// ];
+
 const TREE_DATA: ExampleFlatNode[] = [
   {
     name: 'Fruit',
-    expandable: true,
+    expandable: false,
     level: 0,
   },
   {
     name: 'Apple',
     expandable: false,
-    level: 1,
+    level: 0,
   },
   {
     name: 'Banana',
     expandable: false,
-    level: 1,
+    level: 0,
   },
   {
     name: 'Fruit loops',
     expandable: false,
-    level: 1,
+    level: 0,
   },
   {
     name: 'Vegetables',
-    expandable: true,
+    expandable: false,
     level: 0,
   },
   {
     name: 'Green',
-    expandable: true,
-    level: 1,
+    expandable: false,
+    level: 0,
   },
   {
     name: 'Broccoli',
     expandable: false,
-    level: 2,
+    level: 0,
   },
   {
     name: 'Brussels sprouts',
     expandable: false,
-    level: 2,
+    level: 0,
   },
   {
     name: 'Orange',
-    expandable: true,
-    level: 1,
+    expandable: false,
+    level: 0,
   },
   {
     name: 'Pumpkins',
     expandable: false,
-    level: 2,
+    level: 0,
   },
   {
     name: 'Carrots',
     expandable: false,
-    level: 2,
+    level: 0,
+  },
+  {
+    name: 'Fruit',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Apple',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Banana',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Fruit loops',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Vegetables',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Green',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Broccoli',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Brussels sprouts',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Orange',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Pumpkins',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Carrots',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Fruit',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Apple',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Banana',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Fruit loops',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Vegetables',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Green',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Broccoli',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Brussels sprouts',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Orange',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Pumpkins',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Carrots',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Fruit',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Apple',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Banana',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Fruit loops',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Vegetables',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Green',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Broccoli',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Brussels sprouts',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Orange',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Pumpkins',
+    expandable: false,
+    level: 0,
+  },
+  {
+    name: 'Carrots',
+    expandable: false,
+    level: 0,
   },
 ];
 
@@ -92,7 +315,7 @@ interface ExampleFlatNode {
 export class TreeListComponent implements OnInit {
   // Manually set the amount of buffer and the height of the table elements
   static BUFFER_SIZE = 3;
-  gridHeight = 100;
+  gridHeight = 400;
   rowHeight = 48;
   headerHeight = 10;
 
@@ -104,7 +327,7 @@ export class TreeListComponent implements OnInit {
   rows = of(TREE_DATA);
 
   // dataSource = new ArrayDataSource(TREE_DATA);
-  dataSource!: Observable<ExampleFlatNode[]>; // = of(TREE_DATA);
+  dataSource: Observable<ExampleFlatNode[]> = this.rows;
 
   constructor(
     @Inject(VIRTUAL_SCROLL_STRATEGY)
@@ -122,14 +345,14 @@ export class TreeListComponent implements OnInit {
       b: this.scrollStrategy.scrolledIndexChange,
     }).pipe(
       map((value: any) => {
-        console.log(value.a);
+        console.log(value.b);
         // Determine the start and end rendered range
-        // const start = Math.max(0, value[1] - TreeListComponent.BUFFER_SIZE);
-        // const end = Math.min(value[0].length, value[1] + range);
+        const start = Math.max(0, value.b - TreeListComponent.BUFFER_SIZE);
+        const end = Math.min(value.a.length, value.b + range);
 
         // // Update the datasource for the rendered range of data
-        // return value[0].slice(start, end);
-        return value.a;
+        return value.a.slice(start, end);
+        //return value.a;
       })
     );
     //   .subscribe(console.log);
