@@ -13,57 +13,68 @@ import { TreeVsStratergyService } from '../tree-vs-stratergy.service';
 // const TREE_DATA: ExampleFlatNode[] = [
 //   {
 //     name: 'Fruit',
-//     expandable: true,
+//     hasChild: true,
+//childCount: 1,
 //     level: 0,
 //   },
 //   {
 //     name: 'Apple',
-//     expandable: false,
+//     hasChild: false,
+////childCount: 0,
 //     level: 1,
 //   },
 //   {
 //     name: 'Banana',
-//     expandable: false,
+//     hasChild: false,
+//childCount: 0,
 //     level: 1,
 //   },
 //   {
 //     name: 'Fruit loops',
-//     expandable: false,
+//     hasChild: false,
+//childCount: 0,
 //     level: 1,
 //   },
 //   {
 //     name: 'Vegetables',
-//     expandable: true,
+//     hasChild: true,
+//childCount: 1,
 //     level: 0,
 //   },
 //   {
 //     name: 'Green',
-//     expandable: true,
+//     hasChild: true,
+//childCount: 1,
 //     level: 1,
 //   },
 //   {
 //     name: 'Broccoli',
-//     expandable: false,
+//     hasChild: false,
+////childCount: 0,
 //     level: 2,
 //   },
 //   {
 //     name: 'Brussels sprouts',
-//     expandable: false,
+//     hasChild: false,
+//childCount: 0,
 //     level: 2,
 //   },
 //   {
 //     name: 'Orange',
-//     expandable: true,
+//     hasChild: true,
+// childCount: 1,
 //     level: 1,
 //   },
 //   {
 //     name: 'Pumpkins',
-//     expandable: false,
+//     hasChild: false,
+//childCount: 0,
 //     level: 2,
 //   },
 //   {
 //     name: 'Carrots',
-//     expandable: false,
+//     hasChild: false,
+////childCount: 0,
 //     level: 2,
 //   },
 // ];
@@ -71,229 +82,274 @@ import { TreeVsStratergyService } from '../tree-vs-stratergy.service';
 const TREE_DATA: ExampleFlatNode[] = [
   {
     name: 'Fruit',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Apple',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Banana',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Fruit loops',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Vegetables',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Green',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Broccoli',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Brussels sprouts',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Orange',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Pumpkins',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Carrots',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Fruit',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Apple',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Banana',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Fruit loops',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Vegetables',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Green',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Broccoli',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Brussels sprouts',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Orange',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Pumpkins',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Carrots',
-    expandable: false,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
+  },
+  {
+    name: 'Fruit',
+    hasChild: true,
+    childCount: 1,
+    level: 0,
+  },
+  {
+    name: 'Apple',
+    hasChild: false,
+    childCount: 0,
+    level: 1,
+  },
+  {
+    name: 'Banana',
+    hasChild: true,
+    childCount: 1,
+    level: 0,
+  },
+  {
+    name: 'Fruit loops',
+    hasChild: false,
+    childCount: 0,
+    level: 1,
+  },
+  {
+    name: 'Vegetables',
+    hasChild: true,
+    childCount: 1,
+    level: 0,
+  },
+  {
+    name: 'Green',
+    hasChild: false,
+    childCount: 0,
+    level: 1,
+  },
+  {
+    name: 'Broccoli',
+    hasChild: true,
+    childCount: 1,
+    level: 0,
+  },
+  {
+    name: 'Brussels sprouts',
+    hasChild: false,
+    childCount: 0,
+    level: 1,
+  },
+  {
+    name: 'Orange',
+    hasChild: true,
+    childCount: 1,
+    level: 0,
+  },
+  {
+    name: 'Pumpkins',
+    hasChild: false,
+    childCount: 0,
+    level: 1,
+  },
+  {
+    name: 'Carrots',
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Fruit',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Apple',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Banana',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Fruit loops',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Vegetables',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Green',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Broccoli',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Brussels sprouts',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Orange',
-    expandable: false,
+    hasChild: true,
+    childCount: 1,
     level: 0,
   },
   {
     name: 'Pumpkins',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
   {
     name: 'Carrots',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Fruit',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Apple',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Banana',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Fruit loops',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Vegetables',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Green',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Broccoli',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Brussels sprouts',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Orange',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Pumpkins',
-    expandable: false,
-    level: 0,
-  },
-  {
-    name: 'Carrots',
-    expandable: false,
-    level: 0,
+    hasChild: false,
+    childCount: 0,
+    level: 1,
   },
 ];
 
-/** Flat node with expandable and level information */
+/** Flat node with hasChild and level information */
 interface ExampleFlatNode {
-  expandable: boolean;
+  hasChild: boolean;
+  childCount: number;
   name: string;
   level: number;
   isExpanded?: boolean;
@@ -321,7 +377,7 @@ export class TreeListComponent implements OnInit {
 
   treeControl = new FlatTreeControl<ExampleFlatNode>(
     (node) => node.level,
-    (node) => node.expandable
+    (node) => node.hasChild
   );
 
   rows = of(TREE_DATA);
@@ -335,30 +391,32 @@ export class TreeListComponent implements OnInit {
   ) {}
 
   public ngOnInit() {
-    const range =
-      Math.ceil(this.gridHeight / this.rowHeight) +
-      TreeListComponent.BUFFER_SIZE;
-    this.scrollStrategy.setScrollHeight(this.rowHeight, this.headerHeight);
-
-    this.dataSource = combineLatest({
-      a: this.rows,
-      b: this.scrollStrategy.scrolledIndexChange,
-    }).pipe(
-      map((value: any) => {
-        console.log(value.b);
-        // Determine the start and end rendered range
-        const start = Math.max(0, value.b - TreeListComponent.BUFFER_SIZE);
-        const end = Math.min(value.a.length, value.b + range);
-
-        // // Update the datasource for the rendered range of data
-        return value.a.slice(start, end);
-        //return value.a;
-      })
-    );
+    // const range =
+    //   Math.ceil(this.gridHeight / this.rowHeight) +
+    //   TreeListComponent.BUFFER_SIZE;
+    // this.scrollStrategy.setScrollHeight(this.rowHeight, this.headerHeight);
+    // this.dataSource = combineLatest({
+    //   a: this.rows,
+    //   b: this.scrollStrategy.scrolledIndexChange,
+    // }).pipe(
+    //   map((value: any) => {
+    //     console.log(value.b);
+    //     // Determine the start and end rendered range
+    //     const start = Math.max(0, value.b - TreeListComponent.BUFFER_SIZE);
+    //     const end = Math.min(value.a.length, value.b + range);
+    //     // // Update the datasource for the rendered range of data
+    //     return value.a.slice(start, end);
+    //     //return value.a;
+    //   })
+    // );
     //   .subscribe(console.log);
   }
 
-  hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+  hasChild = (_: number, node: ExampleFlatNode) => node.hasChild;
+
+  expandCollapse(node: ExampleFlatNode) {
+    node.isExpanded = !node.isExpanded;
+  }
 
   getParentNode(node: ExampleFlatNode) {
     const nodeIndex = TREE_DATA.indexOf(node);
