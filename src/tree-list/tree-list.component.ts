@@ -383,7 +383,9 @@ export class TreeListComponent implements OnInit {
   rows = of(TREE_DATA);
 
   // dataSource = new ArrayDataSource(TREE_DATA);
-  dataSource: Observable<ExampleFlatNode[]> = this.rows;
+  dataSource1: Observable<ExampleFlatNode[]> = this.rows;
+
+  dataSource2: Observable<ExampleFlatNode[]> = this.rows;
 
   constructor(
     @Inject(VIRTUAL_SCROLL_STRATEGY)
@@ -396,9 +398,9 @@ export class TreeListComponent implements OnInit {
       TreeListComponent.BUFFER_SIZE;
     this.scrollStrategy.setScrollHeight(this.rowHeight, this.headerHeight);
 
-    this.dataSource = combineLatest({
+    this.dataSource2 = combineLatest({
       a: this.rows,
-      // b: this.scrollStrategy.scrolledIndexChange,
+      b: this.scrollStrategy.scrolledIndexChange,
     }).pipe(
       map((value: any) => {
         console.log(value.b);
