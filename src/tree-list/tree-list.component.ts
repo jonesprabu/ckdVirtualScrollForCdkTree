@@ -391,25 +391,26 @@ export class TreeListComponent implements OnInit {
   ) {}
 
   public ngOnInit() {
-    // const range =
-    //   Math.ceil(this.gridHeight / this.rowHeight) +
-    //   TreeListComponent.BUFFER_SIZE;
-    // this.scrollStrategy.setScrollHeight(this.rowHeight, this.headerHeight);
-    // this.dataSource = combineLatest({
-    //   a: this.rows,
-    //   b: this.scrollStrategy.scrolledIndexChange,
-    // }).pipe(
-    //   map((value: any) => {
-    //     console.log(value.b);
-    //     // Determine the start and end rendered range
-    //     const start = Math.max(0, value.b - TreeListComponent.BUFFER_SIZE);
-    //     const end = Math.min(value.a.length, value.b + range);
-    //     // // Update the datasource for the rendered range of data
-    //     return value.a.slice(start, end);
-    //     //return value.a;
-    //   })
-    // );
-    //   .subscribe(console.log);
+    const range =
+      Math.ceil(this.gridHeight / this.rowHeight) +
+      TreeListComponent.BUFFER_SIZE;
+    this.scrollStrategy.setScrollHeight(this.rowHeight, this.headerHeight);
+
+    this.dataSource = combineLatest({
+      a: this.rows,
+      // b: this.scrollStrategy.scrolledIndexChange,
+    }).pipe(
+      map((value: any) => {
+        console.log(value.b);
+        // Determine the start and end rendered range
+        //const start = Math.max(0, value.b - TreeListComponent.BUFFER_SIZE);
+        //const end = Math.min(value.a.length, value.b + range);
+        // // Update the datasource for the rendered range of data
+        //return value.a.slice(start, end);
+        return value.a;
+      })
+    );
+    // .subscribe(console.log);
   }
 
   hasChild = (_: number, node: ExampleFlatNode) => node.hasChild;
